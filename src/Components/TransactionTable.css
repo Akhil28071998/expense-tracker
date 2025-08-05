@@ -1,0 +1,54 @@
+.transaction-table-container {
+  margin: 2rem auto;
+  max-width: 700px;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.transaction-table-container h2 {
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+/* Table Styling */
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.transaction-table th,
+.transaction-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.transaction-table th {
+  background-color: #f7f7f7;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Row Styles */
+.expense-row {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.income-row {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* No Transactions Message */
+.no-transactions {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 1rem;
+}

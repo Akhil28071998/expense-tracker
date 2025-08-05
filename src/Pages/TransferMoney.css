@@ -1,0 +1,180 @@
+/* ===== Transfer Table Container ===== */
+.transfer-table-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  margin: 2rem auto 0 auto;
+  max-width: 700px;
+  border: 1px solid #e5e7eb;
+}
+
+.transfer-table-container h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2980b9;
+  letter-spacing: 0.2px;
+  text-align: left;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 0.6rem 0.7rem;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.transactions-table th {
+  background: linear-gradient(to right, #f9fafb, #eef2f7);
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+.transactions-table tr:nth-child(even) {
+  background-color: #f7fafd;
+}
+
+.transactions-table tr:hover {
+  background-color: #eaf2fb;
+  transition: background-color 0.18s;
+}
+
+.transactions-table td {
+  font-size: 0.97em;
+}
+
+.transactions-table td:last-child {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 700px) {
+  .transfer-table-container {
+    padding: 0.7rem 0.2rem 1rem 0.2rem;
+    max-width: 99vw;
+  }
+  .transactions-table th,
+  .transactions-table td {
+    padding: 0.35rem 0.3rem;
+    font-size: 0.8rem;
+  }
+}
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Page Container ===== */
+.transfer-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e6f0ff, #f8fbff);
+}
+
+/* ===== Heading ===== */
+.transfer-page h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ===== Form Card ===== */
+.transfer {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== Labels and Inputs ===== */
+.transfer label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  gap: 6px;
+}
+
+/* Input & Dropdown styles same */
+.transfer input,
+.transfer select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transfer input:focus,
+.transfer select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* ===== Button ===== */
+.transfer button {
+  padding: 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.transfer button:hover {
+  background-color: #2980b9;
+}
+
+.transfer button:active {
+  transform: scale(0.98);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .transfer-page h2 {
+    font-size: 1.6rem;
+    max-width: 90%;
+  }
+
+  .transfer {
+    max-width: 90%;
+    padding: 20px;
+  }
+}

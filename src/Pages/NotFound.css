@@ -1,0 +1,63 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  /* Light blue gradient background */
+  background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 50%, #ffffff 100%);
+  color: #2c3e50;
+  text-align: center;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notfound-title {
+  font-size: 8rem;
+  font-weight: 800;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  animation: bounce 1.5s infinite;
+}
+
+.notfound-message {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.notfound-button {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #4ca1af, #2c3e50);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notfound-button:hover {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  transform: translateY(-2px);
+}
+
+/* Bounce Animation for 404 */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

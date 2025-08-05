@@ -1,0 +1,255 @@
+/* ===== Loan Manager Buttons ===== */
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn,
+.deduct-emi-btn {
+  padding: 6px 16px;
+  font-size: 0.95rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin: 0 2px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 6px rgba(41, 128, 185, 0.08);
+}
+
+.edit-btn {
+  background: #3498db;
+  color: #fff;
+}
+.edit-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+.delete-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+.save-btn {
+  background: #27ae60;
+  color: #fff;
+}
+.save-btn:hover {
+  background: #219150;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: #b2bec3;
+  color: #2d3436;
+}
+.cancel-btn:hover {
+  background: #636e72;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.deduct-emi-btn {
+  background: linear-gradient(90deg, #4ca1af, #2980b9);
+  color: #fff;
+}
+.deduct-emi-btn:disabled {
+  background: #b2bec3;
+  color: #636e72;
+  cursor: not-allowed;
+}
+.deduct-emi-btn:hover:not(:disabled) {
+  background: linear-gradient(90deg, #2980b9, #4ca1af);
+  transform: translateY(-2px);
+}
+
+/* Table cell alignment for actions */
+.loans-table td:last-child {
+  text-align: center;
+}
+/* ===== Loans Page Wrapper ===== */
+.loans-page {
+  max-width: 98vw;
+  margin: 1.2rem auto;
+  padding: 1rem 0.7rem;
+  background: linear-gradient(135deg, #f7fafd 60%, #e3f2fd 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(41, 128, 185, 0.07);
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #e0e0e0;
+  color: #2c3e50;
+  min-height: 70vh;
+}
+
+/* ===== Page Heading ===== */
+.loans-page h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2980b9;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(41, 128, 185, 0.06);
+}
+
+/* ===== Loan Form ===== */
+.loan-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(41, 128, 185, 0.04);
+  padding: 0.7rem 0.5rem;
+}
+
+.loan-form input {
+  flex: 1;
+  min-width: 90px;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.92rem;
+  border: 1px solid #bfc9d1;
+  border-radius: 6px;
+  background: #f7fafd;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(41, 128, 185, 0.03);
+}
+
+.loan-form input:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+.loan-form button {
+  flex-basis: 100%;
+  background: linear-gradient(135deg, #2980b9, #4ca1af);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.5rem 1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  max-width: 120px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 1px 4px rgba(41, 128, 185, 0.06);
+}
+
+.loan-form button:hover {
+  background: linear-gradient(135deg, #4ca1af, #2980b9);
+  transform: translateY(-2px);
+}
+/* ===== Loan Table (Content Based Width) ===== */
+.loans-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 1px 4px rgba(41, 128, 185, 0.06);
+  margin-top: 0.7rem;
+}
+
+.loans-table th,
+.loans-table td {
+  padding: 0.5rem 0.4rem;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 0.92rem;
+}
+
+.loans-table th {
+  background: linear-gradient(90deg, #e3f2fd 80%, #f7fafd 100%);
+  color: #2980b9;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  font-size: 0.85rem;
+}
+
+.loans-table tr:nth-child(even) {
+  background-color: #f7fafd;
+}
+
+.loans-table tr:hover {
+  background-color: #eaf2fb;
+  transition: background-color 0.15s;
+}
+
+/* Active/Completed Loan Row */
+.active-loan {
+  background-color: #fffefc;
+}
+
+.completed-loan {
+  background: linear-gradient(90deg, #e8f8f2 80%, #f7fafd 100%);
+  color: #27ae60;
+  font-weight: 700;
+}
+
+/* Status Column */
+.status {
+  font-weight: 700;
+  font-size: 0.97rem;
+  letter-spacing: 0.2px;
+}
+
+/* ===== Pay EMI Button ===== */
+.deduct-emi-btn {
+  background: linear-gradient(90deg, #27ae60, #4ca1af);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.18s, transform 0.13s;
+  box-shadow: 0 1px 3px rgba(39, 174, 96, 0.07);
+}
+
+.deduct-emi-btn:hover:not(:disabled) {
+  background: linear-gradient(90deg, #219150, #4ca1af);
+  transform: translateY(-1px);
+}
+
+.deduct-emi-btn:disabled {
+  background: #b2bec3;
+  color: #636e72;
+  cursor: not-allowed;
+}
+
+/* ===== Empty State ===== */
+.no-loan-text {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 0.97rem;
+  margin-top: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .loans-page {
+    padding: 0.4rem;
+    max-width: 100vw;
+  }
+  .loan-form input {
+    min-width: 70px;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.4rem;
+  }
+  .loans-table th,
+  .loans-table td {
+    padding: 0.3rem 0.2rem;
+    font-size: 0.7rem;
+  }
+}

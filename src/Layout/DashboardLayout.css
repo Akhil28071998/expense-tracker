@@ -1,0 +1,63 @@
+.auth-container {
+  background: #f4f6f8;
+  padding: 1rem;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 300px;
+  margin: 1rem auto;
+}
+
+.login-form input {
+  padding: 0.5rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+.login-form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.toggle-auth {
+  margin-top: 0.5rem;
+  color: #2980b9;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.income-box {
+  background: #e8f5e9; /* Light green background */
+  color: #c2cac2; /* Dark green text */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.15);
+}
+
+.expense-box {
+  background: #94505a; /* Light red background */
+  color: #a4a7ab; /* Dark red text */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(198, 40, 40, 0.15);
+}
+
+.balance-box {
+  background: #e3f2fd; /* Light blue background */
+  color: #1565c0; /* Dark blue text */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(21, 101, 192, 0.15);
+}

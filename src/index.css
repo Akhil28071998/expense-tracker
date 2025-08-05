@@ -1,0 +1,33 @@
+* {
+  background-color: rgb(85, 138, 185);
+}
+
+.expense-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.expense-form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.expense-form button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.expense-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expense-list li {
+  display: flex;
+  justify-content: space-between;
+  background: #938c4b;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+}

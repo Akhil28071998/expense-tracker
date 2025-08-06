@@ -25,12 +25,14 @@
 }
 
 .delete-btn {
-  background: #e74c3c;
+  background: linear-gradient(90deg, #e74c3c 70%, #f37055 100%);
   color: #fff;
+  border: none;
 }
 .delete-btn:hover {
-  background: #c0392b;
-  transform: translateY(-2px);
+  background: linear-gradient(90deg, #c0392b 70%, #f37055 100%);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.18);
+  transform: translateY(-2px) scale(1.04);
 }
 
 .save-btn {
@@ -43,13 +45,15 @@
 }
 
 .cancel-btn {
-  background: #b2bec3;
+  background: linear-gradient(90deg, #b2bec3 70%, #636e72 100%);
   color: #2d3436;
+  border: none;
 }
 .cancel-btn:hover {
-  background: #636e72;
+  background: linear-gradient(90deg, #636e72 70%, #b2bec3 100%);
   color: #fff;
-  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 110, 114, 0.18);
+  transform: translateY(-2px) scale(1.04);
 }
 
 .deduct-emi-btn {

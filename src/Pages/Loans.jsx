@@ -184,16 +184,6 @@ const Loans = () => {
     setLoans(updatedLoans);
   };
 
-  // Calculate total EMI left for all active loans
-  const getTotalEMILeft = () => {
-    return loans.reduce((total, loan) => {
-      if (loan.status === "Active") {
-        return total + loan.emi;
-      }
-      return total;
-    }, 0);
-  };
-
   return (
     <div className="loans-page">
       <h2>💳 Loan Manager</h2>
@@ -254,19 +244,6 @@ const Loans = () => {
               </tr>
             </thead>
             <tbody>
-              {/* Show total EMI left as a summary row at the top of tbody */}
-              <tr>
-                <td
-                  colSpan="9"
-                  style={{
-                    textAlign: "right",
-                    fontWeight: "bold",
-                    background: "#f7fafc",
-                  }}
-                >
-                  Total EMI Left: ₹{getTotalEMILeft().toFixed(2)}
-                </td>
-              </tr>
               {loans.map((loan, idx) => (
                 <tr
                   key={idx}
@@ -354,17 +331,31 @@ const Loans = () => {
                   <td>
                     {editIdx === idx ? (
                       <>
-                        <button onClick={() => handleSaveEdit(idx)}>
+                        <button
+                          className="save-btn"
+                          onClick={() => handleSaveEdit(idx)}
+                        >
                           Save
                         </button>
-                        <button onClick={handleCancelEdit}>Cancel</button>
+                        <button
+                          className="cancel-btn"
+                          onClick={handleCancelEdit}
+                        >
+                          Cancel
+                        </button>
                       </>
                     ) : (
                       <>
-                        <button onClick={() => handleEditLoan(idx)}>
+                        <button
+                          className="save-btn"
+                          onClick={() => handleEditLoan(idx)}
+                        >
                           Edit
                         </button>
-                        <button onClick={() => handleDeleteLoan(idx)}>
+                        <button
+                          className="cancel-btn"
+                          onClick={() => handleDeleteLoan(idx)}
+                        >
                           Delete
                         </button>
                       </>

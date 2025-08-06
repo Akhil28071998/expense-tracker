@@ -10,6 +10,7 @@ const TransferMoney = () => {
     recipient: "",
     account: "",
     confirmAccount: "",
+    ifsc: "",
     upiId: "",
     mobile: "",
     amount: "",
@@ -26,6 +27,12 @@ const TransferMoney = () => {
     if (transferType === "bank") {
       if (formData.account !== formData.confirmAccount) {
         alert("The account numbers do not match. Please re-enter and confirm.");
+        return;
+      }
+      // IFSC validation: 4 letters, 0, 6 digits (standard format)
+      const ifscRegex = /^[A-Z]{4}0[A-Z0-9]{6}$/i;
+      if (!ifscRegex.test(formData.ifsc)) {
+        alert("Please enter a valid IFSC code (e.g., SBIN0001234)");
         return;
       }
     }
@@ -70,6 +77,7 @@ const TransferMoney = () => {
       recipient: "",
       account: "",
       confirmAccount: "",
+      ifsc: "",
       upiId: "",
       mobile: "",
       amount: "",
@@ -137,6 +145,21 @@ const TransferMoney = () => {
                 required
                 pattern="[0-9]{1,}"
                 inputMode="numeric"
+              />
+            </label>
+
+            <label>
+              IFSC Code:
+              <input
+                type="text"
+                name="ifsc"
+                value={formData.ifsc}
+                onChange={handleChange}
+                required
+                pattern="[A-Za-z]{4}0[A-Za-z0-9]{6}"
+                placeholder="e.g. SBIN0001234"
+                maxLength={11}
+                style={{ textTransform: "uppercase" }}
               />
             </label>
           </>

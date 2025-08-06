@@ -12,7 +12,7 @@ function calculateEMI(amount, rate, tenure) {
 }
 
 const Loans = () => {
-  const { addTransaction } = useContext(FinanceContext);
+  const { addTransaction, deductBalance } = useContext(FinanceContext);
 
   //loan data store in one array
   const [loans, setLoans] = useState(() => {
@@ -161,7 +161,8 @@ const Loans = () => {
       const newRemaining = loan.remaining - loan.emi;
       const newPaidEMIs = loan.paidEMIs + 1;
 
-      addTransaction({
+      // Deduct EMI from balance
+      deductBalance(loan.emi, {
         type: "expense",
         name: `EMI for ${loan.lender}`,
         category: "Loan EMI",
@@ -347,16 +348,31 @@ const Loans = () => {
                     ) : (
                       <>
                         <button
-                          className="save-btn"
+                          className="edit-btn"
                           onClick={() => handleEditLoan(idx)}
                         >
                           Edit
                         </button>
                         <button
-                          className="cancel-btn"
+                          className="delete-btn"
                           onClick={() => handleDeleteLoan(idx)}
                         >
                           Delete
+                        </button>
+                        <button
+                          className="deduct-emi-btn"
+                          onClick={() => handleDeductEMI(idx)}
+                          disabled={(() => {
+                            const currentMonth = new Date()
+                              .toISOString()
+                              .slice(0, 7);
+                            return (
+                              loan.lastEMIPaidDate === currentMonth ||
+                              loan.status === "Completed"
+                            );
+                          })()}
+                        >
+                          Pay EMI
                         </button>
                       </>
                     )}

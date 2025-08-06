@@ -73,6 +73,11 @@
 /* Table cell alignment for actions */
 .loans-table td:last-child {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 260px;
 }
 /* ===== Loans Page Wrapper ===== */
 .loans-page {

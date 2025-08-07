@@ -37,6 +37,10 @@ const Navbar = () => {
           </li>
 
           <li>
+            <Link to="/emicalculator">Emi Calculator</Link>
+          </li>
+
+          <li>
             <Link to="/reports">Reports</Link>
           </li>
         </ul>
